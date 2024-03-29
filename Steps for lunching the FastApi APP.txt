@@ -1,0 +1,42 @@
+1. **Access API Documentation**:
+   - Open the API documentation by navigating to `/docs` or `/redoc` on the server where the FastAPI application is hosted.
+
+2. **Get Authorized**:
+   - Before accessing any endpoints, ensure that you are authorized to use the API. This typically involves providing your username and password for authentication.
+
+3. **Verify Authorization and API Functionality**:
+   - Once authenticated, verify that you are authorized and the API is working properly. You should see a confirmation message or status indicating successful authentication and API functionality.
+
+4. **Filter Questions**:
+   - To retrieve questions, you need to provide the `test_type` and `category` parameters along with the `number` parameter indicating the desired number of questions (must be 5, 10, or 20).
+   - Ensure that the provided parameters meet the requirements specified by the API, otherwise, you may encounter errors.
+
+5. **Create a New Question**:
+   - To create a new question, you must be logged in with an admin user.
+   - Prepare the question data in the specified format. The question data should include fields such as `question`, `subject`, `use`, `correct`, `responseA`, `responseB`, `responseC`, `responseD`, and `remark`. **
+   - Submit a request to the appropriate endpoint for creating a new question, providing the question data in the request body.
+   - Upon successful creation, the new question will be added to the CSV file.
+
+By following these steps, you can effectively interact with the FastAPI application, including filtering questions and creating new ones. Make sure to adhere to the specified requirements and format when interacting with the API endpoints.
+
+
+**
+{
+  "question": "Test: " 
+  ,
+  "subject": "BDD"
+  ,
+  "use": "Test de validation"
+    ,
+  "correct": "D"
+  ,
+  "responseA": "Stocker des données"
+  ,
+  "responseB": "Faire des calculs"
+  ,
+  "responseC": "Orchestrer des jobs MapReduce"
+  ,
+  "responseD": "Tous ces points"
+  ,
+  "remark": "None"
+}
